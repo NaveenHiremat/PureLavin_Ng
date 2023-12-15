@@ -1,4 +1,4 @@
-import { Component, ViewChild , ViewEncapsulation} from '@angular/core';
+import { Component, ViewChild , ViewEncapsulation} from '@angular/core'
 import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
