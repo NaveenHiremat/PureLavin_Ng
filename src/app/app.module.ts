@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { HomeModule } from './components/home/home.module';
 
 // material import start
@@ -53,6 +52,15 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ShopComponent } from './components/shop/shop.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+
+import {NgbCollapseModule} from '@ng-bootstrap/ng-bootstrap';
+
+
+//image slider
+import { NgImageSliderModule } from 'ng-image-slider';
+
 
 //material import end
 
@@ -62,9 +70,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     AboutComponent,
     LoginComponent,
-    ContactComponent
+    ShopComponent,
+    SignUpComponent
   ],
   imports: [
+    NgbCollapseModule,
     BrowserModule,
     AppRoutingModule,
     HomeModule,
@@ -104,9 +114,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatPaginatorModule,
     MatSortModule,
     MatTableModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgImageSliderModule
   ],
   exports:[ 
+    NgbCollapseModule,
     MatAutocompleteModule,
     MatCheckboxModule,
     MatDatepickerModule,
@@ -141,7 +153,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatTooltipModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
+    NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

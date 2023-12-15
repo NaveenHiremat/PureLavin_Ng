@@ -1,33 +1,32 @@
-<mat-sidenav-container>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="#">Navbar</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+  
+	<div class="collapse navbar-collapse" id="navbarColor03" [ngbCollapse]="isCollapsed">
+	  <ul class="navbar-nav mr-auto">
+		<li class="nav-item active">
+		  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="#">Features</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="#">Pricing</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="#">About</a>
+		</li>
+	  </ul>
+	  <form class="form-inline my-2 my-lg-0">
+		<input class="form-control mr-sm-2" type="text" placeholder="Search">
+		<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+	  </form>
+	</div>
+  </nav>
 
-	<mat-sidenav #sidenav mode="over">
-		<label>PureLavin</label> 
-    <hr/>   
-		<nav>
-			<a routerLink="home"      (click)="clickHandler()" routerLinkActive="active">Home</a>
-			<a routerLink="about"     (click)="clickHandler()" routerLinkActive="active">About</a>
-			<a routerLink="login"     (click)="clickHandler()" routerLinkActive="active">Login</a>
-			<a routerLink="sign-up"   (click)="clickHandler()" routerLinkActive="active">Sign Up</a>
-			<a routerLink="contact"   (click)="clickHandler()" routerLinkActive="active">Contact</a>
-		</nav>
-	</mat-sidenav>
-
-	<mat-sidenav-content>
-		<mat-toolbar color="primary">
-			<header>
-				<mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-				<label>My Application</label>        
-        <nav>
-          <a routerLink="home"    routerLinkActive="active">Home</a>
-          <a routerLink="about"   routerLinkActive="active">About</a>
-          <a routerLink="login"   routerLinkActive="active">Login</a>
-          <a routerLink="sign-up" routerLinkActive="active">Sign Up</a>
-          <a routerLink="contact" routerLinkActive="active">Contact</a>
-        </nav>        
-      </header>
-		</mat-toolbar>
-    <section>
-      <router-outlet></router-outlet>
-    </section>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<div style="width: 420px; height: 500px; text-align:center;margin:0; padding:0;">
+	<ng-image-slider #nav [images]="imageObject" [imagePopup]="false" [infinite]="false" [autoSlide]="1"
+		[imageSize]="{width: '100%', height: 300}" slideImage="1"></ng-image-slider>
+</div>
